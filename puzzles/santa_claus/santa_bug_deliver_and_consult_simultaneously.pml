@@ -27,7 +27,7 @@
  *      SPIN will report an assertion violation (assert fails).
  *
  *   4) Replay the counterexample trace:
- *        spin -t santa_bug_deliver_and_consult_simultaneously.pml
+ *        spin -p -t santa_bug_deliver_and_consult_simultaneously.pml
  *
  *      In the trace, you can see an interleaving where both Santa processes
  *      overlap such that delivering and consulting are true at the same time,

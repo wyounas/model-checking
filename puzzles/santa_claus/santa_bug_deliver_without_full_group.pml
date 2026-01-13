@@ -26,7 +26,7 @@
  *      SPIN will report a violation of the LTL property.
  *
  *   4) Replay the counterexample trace:
- *        spin -t santa_bug_deliver_without_full_group.pml
+ *        spin -p -t santa_bug_deliver_without_full_group.pml
  *
  *      In the trace, you can see Santa reach `delivering = true`
  *      before all reindeer have executed their `harnessed ? 1`

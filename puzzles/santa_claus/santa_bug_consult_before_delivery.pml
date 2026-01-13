@@ -21,13 +21,13 @@
  *   2) Compile the verifier:
  *        gcc -O2 -o pan pan.c
  *
- *   3) Check the precedence property (with fairness enabled):
- *        ./pan -N reindeer_precedence_U -f
+ *   3) Check the precedence property:
+ *        ./pan -N reindeer_precedence_U
  *
  *      SPIN will report a violation of the LTL property.
  *
  *   4) Replay the counterexample trace:
- *        spin -t santa_bug_consult_before_delivery.pml
+ *        spin -p -t santa_bug_consult_before_delivery.pml
  *
  *      In the trace, you can see SantaConsulting enter the consulting
  *      section even though r_count == NUM_REINDEER and delivery has not
@@ -91,7 +91,7 @@ active proctype SantaToyDelivery()
 }
 
 
-// ./pan -N reindeer_precedence_U -f
+// ./pan -N reindeer_precedence_U 
 
 ltl reindeer_precedence_U {
     [] ( (r_count == NUM_REINDEER) -> ( (!consulting) U delivering ) )
