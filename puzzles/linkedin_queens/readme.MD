@@ -32,11 +32,11 @@ Run the following inside your virtual environment:
 
 ```bash
 
-pip install --upgrade pip setuptools wheel
+$ pip install --upgrade pip setuptools wheel
 
-export CFLAGS="-Wno-incompatible-function-pointer-types"
-pip install --no-cache-dir "pyeda==0.29.0"
-unset CFLAGS
+$ export CFLAGS="-Wno-incompatible-function-pointer-types"
+$ pip install --no-cache-dir "pyeda==0.29.0"
+$ unset CFLAGS
 ```
 
 And then run the Python program
@@ -49,14 +49,14 @@ $ python3 queens.py
 ```bash
 $ spin -aqueensfourbyfour.pml
 $ gcc -o pan pan.c
-./pan -E -c0 -e
+$ ./pan -E -c0 -e
 ```
 
 
 ## View a Specific Trail
 
 ```bash
-spin -p -t -k queenfourbyfour.pml.trail queenfourbyfour.pml
+$ spin -p -t -k queenfourbyfour.pml.trail queenfourbyfour.pml
 ```
 
 ## Running FizzBee
@@ -64,7 +64,7 @@ spin -p -t -k queenfourbyfour.pml.trail queenfourbyfour.pml
 After installing FizzBee, execute:
 
 ```bash
-fizz puzzle.fizz
+$ fizz puzzle.fizz
 ```
 
 This will invoke FizzBee's model checker on `puzzle.fizz` and display results.
