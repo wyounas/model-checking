@@ -19,7 +19,7 @@ This directory contains:
 ## Prerequisites
 
 * Python (ran the SAT solver on version 3.14.3) and PyEDA 
-* Spin model checker
+* Spin model checker (Spin Version 6.5.2)
 * FizzBee (see [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for install)
 
 ### Running SAT Solver - Installing PyEDA (macOS, Python ≥3.12)
