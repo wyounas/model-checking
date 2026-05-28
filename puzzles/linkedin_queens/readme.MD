@@ -18,8 +18,9 @@ This directory contains:
 
 ## Prerequisites
 
-* **Spin** model checker
-* **FizzBee** (see [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for install)
+* Python (ran the SAT solver on version 3.14.3) and PyEDA 
+* Spin model checker
+* FizzBee (see [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for install)
 
 ### Running SAT Solver - Installing PyEDA (macOS, Python ≥3.12)
 
@@ -36,6 +37,11 @@ pip install --upgrade pip setuptools wheel
 export CFLAGS="-Wno-incompatible-function-pointer-types"
 pip install --no-cache-dir "pyeda==0.29.0"
 unset CFLAGS
+```
+
+And then run the Python program
+```bash
+$ python3 queens.py
 ```
 
 ## Running the Spin/Promela Model
