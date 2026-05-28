@@ -21,7 +21,7 @@ This directory contains:
 * **Spin** model checker
 * **FizzBee** (see [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for install)
 
-### SAT Solver - Installing PyEDA (macOS, Python ≥3.12)
+### Running SAT Solver - Installing PyEDA (macOS, Python ≥3.12)
 
 To run the SAT Solver in Python, we need to install PyEDA. 
 
@@ -38,7 +38,7 @@ pip install --no-cache-dir "pyeda==0.29.0"
 unset CFLAGS
 ```
 
-## Model Checker - Run the Promela Model
+## Running the Spin/Promela Model
 
 ```bash
 $ spin -aqueensfourbyfour.pml
