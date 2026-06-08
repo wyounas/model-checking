@@ -1,30 +1,30 @@
-# Quick Start: LinkedIn-Queens and puzzle.fizz
+# Quick Start: LinkedIn Queens
 
-## Blog Post 
+## Blog Post
 
-This repository contains code for the LinkedIn-Queens puzzle, documented in this blog post:  
-[Exploring All Solutions to LinkedIn Queens Puzzle with a SAT Solver and Two Model Checkers](https://wyounas.github.io/model-checking/puzzles/2025/10/18/exploring-all-solutions-to-linkedin-queens-puzzle-with-a-sat-solver-and-two-model-checkers/)
+This repository contains code for solving the LinkedIn Queens puzzle with Promela, Python, and FizzBee, as documented in this blog post:
+[Exploring All Solutions to LinkedIn Queens Puzzle with a SAT Solver and Two Model Checkers](https://wyounas.github.io/model-checking/puzzles/2026/06/06/exploring-all-solutions-to-linkedin-queens-puzzle-with-a-sat-solver-and-two-model-checkers/)
 
 
 ## Details
 
 This directory contains:
 
-* **queensfourbyfour.pml**: Promela model for the LinkedIn-Queens puzzle, for a 4x4 grid.
-* **queensninebynine.pml**: Promela model for the LinkedIn-Queens puzzle, for a 9x9 grid.
-* **queensninebynine.pml**: Promela model for the LinkedIn-Queens puzzle, for a 9x9 grid.
-* **queens_wo_region.pml**: Promela model for the LinkedIn-Queens puzzle, without the region constraint.
-* **puzzle.fizz**: FizzBee model of the LinkedIn-Queens puzzle.
+* queenfourbyfour.pml: Promela model for a 4x4 LinkedIn Queens grid.
+* queenninebynine.pml: Promela model for a 9x9 LinkedIn Queens grid.
+* queens_wo_region.pml: Promela model without the region constraint.
+* queens.py: Python SAT solver for the LinkedIn Queens puzzle.
+* queens.fizz: FizzBee model for the LinkedIn Queens puzzle.
 
 ## Prerequisites
 
-* Python (ran the SAT solver on version 3.14.3) and PyEDA 
-* Spin model checker (Spin Version 6.5.2)
-* FizzBee (see [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for install)
+* Python and PyEDA. The SAT solver was tested with Python 3.14.3.
+* Spin model checker. Tested with Spin 6.5.2.
+* FizzBee. See [https://github.com/fizzbee-io/fizzbee](https://github.com/fizzbee-io/fizzbee) for installation instructions.
 
-### Running SAT Solver - Installing PyEDA (macOS, Python ≥3.12)
+### Running the SAT Solver: Installing PyEDA (macOS, Python >= 3.12)
 
-To run the SAT Solver in Python, we need to install PyEDA. 
+To run the SAT solver in Python, install PyEDA.
 
 I had to suppress a strict compiler warning during installation, so please proceed with caution.
 
@@ -39,7 +39,7 @@ $ pip install --no-cache-dir "pyeda==0.29.0"
 $ unset CFLAGS
 ```
 
-And then run the Python program
+Then run the Python program:
 ```bash
 $ python3 queens.py
 ```
@@ -47,13 +47,13 @@ $ python3 queens.py
 ## Running the Spin/Promela Model
 
 ```bash
-$ spin -aqueensfourbyfour.pml
+$ spin -a queenfourbyfour.pml
 $ gcc -o pan pan.c
 $ ./pan -E -c0 -e
 ```
 
 
-## View a Specific Trail
+### View a Specific Trail
 
 ```bash
 $ spin -p -t -k queenfourbyfour.pml.trail queenfourbyfour.pml
@@ -64,7 +64,7 @@ $ spin -p -t -k queenfourbyfour.pml.trail queenfourbyfour.pml
 After installing FizzBee, execute:
 
 ```bash
-$ fizz puzzle.fizz
+$ fizz queens.fizz
 ```
 
-This will invoke FizzBee's model checker on `puzzle.fizz` and display results.
+This invokes FizzBee's model checker on `queens.fizz` and displays the results.
