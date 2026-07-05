@@ -3,7 +3,7 @@
 ## Blog Post
 
 This repository contains code for solving the LinkedIn Queens puzzle with Promela, Python, and FizzBee, as documented in this blog post:
-[Exploring All Solutions to LinkedIn Queens Puzzle with a SAT Solver and Two Model Checkers](https://wyounas.github.io/model-checking/puzzles/2026/06/06/exploring-all-solutions-to-linkedin-queens-puzzle-with-a-sat-solver-and-two-model-checkers/)
+[Finding All Solutions to LinkedIn Queens with a SAT Solver and Model Checkers](https://wyounas.github.io/model-checking/puzzles/2026/06/06/finding-all-solutions-to-linkedin-queens-with-a-sat-solver-and-model-checkers/)
 
 
 ## Details
